@@ -37,6 +37,8 @@ class Register extends React.Component {
             if(user.id){
                 this.props.loadUser(user);
                 this.props.routeChange('signin');
+            }else{
+                alert("Please fill in all fields")
             }
         })
     }
@@ -49,26 +51,23 @@ class Register extends React.Component {
                         <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
                         <legend className="f1 fw6 ph0 mh0">Registration</legend>
                         <div className="mt3">
-                            <label className="db fw6 lh-copy f6" htmlFor="user-name">User Name</label>
+                            <label className="db fw6 lh-copy f5" htmlFor="user-name">User Name</label>
                             <input onChange = {this.nameChange}
                             className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="user-name"  id="user-name"/>
                         </div>
                         <div className="mt3">
-                            <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
+                            <label className="db fw6 lh-copy f5" htmlFor="email-address">Email</label>
                             <input onChange = {this.emailChange}
                             className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address"/>
                         </div>
                         <div className="mv3">
-                            <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+                            <label className="db fw6 lh-copy f5" htmlFor="password">Password</label>
                             <input onChange = {this.passwordChange} 
                             className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password"/>
                         </div>
                         </fieldset>
                         <div className="">
                         <input onClick= {this.submitRegister} className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Register"/>
-                        </div>
-                        <div className="lh-copy mt3">
-                        <a href="#0" className="f6 link dim black db">Forgot your password?</a>
                         </div>
                     </div>
                 </main>

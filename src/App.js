@@ -123,7 +123,7 @@ class App extends Component {
     const {isSignedIn, imageUrl, route,box} = this.state;
     return(
     <div className="App">
-       <Particles className='particles' params={partOptions}/>
+      <Particles className='particles' params={partOptions}/>
       <Navigation isSignedIn={isSignedIn} routeChange={this.routeChange}/>
       <Logo/>
       { route ==='home' ?
@@ -139,6 +139,9 @@ class App extends Component {
        :<Register loadUser={this.loadUser} routeChange={this.routeChange}/>
       ) 
       }
+      <div className="mt6">
+        <p>© 2019 Muli Orgatz</p>
+      </div>
     </div>
     );
   }
